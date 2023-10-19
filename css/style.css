@@ -323,6 +323,7 @@ body {
                 right: -65px;
                 width: 150px;
                 top: 320px;
+                animation: leftright 1s 1;
             }
 
             .mainimgbp {
@@ -330,6 +331,7 @@ body {
                 right: -90px;
                 width: 140px;
                 top: 100px;
+                animation: bottomtop 1s 1;
             }
 
             .mainimgdoctor {
@@ -337,6 +339,7 @@ body {
                 bottom: 250px;
                 left: -100px;
                 width: 350px;
+                animation: topbottom 1s 1;
             }
         }
     }
@@ -565,3 +568,66 @@ body {
 
 
 /* ====== Media Quries (532 / Small Tabs) ====== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+
+@keyframes leftright {
+    0%{
+        transform: translateX(40px);
+        opacity: 0;
+    }
+    
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    
+}
+
+
+@keyframes topbottom {
+    0%{
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    
+}
+
+
+@keyframes bottomtop {
+    0%{
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+    
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    
+} */
