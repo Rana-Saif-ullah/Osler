@@ -200,7 +200,6 @@ body {
 
 
 
-
 /* ====== Header Section ====== */
 /* ====== Header Section ====== */
 
@@ -266,7 +265,10 @@ body {
         align-items: center;
         justify-content: space-between;
 
+        overflow-y: hidden;
+
         .hero__content {
+            z-index: 1;
             display: flex;
             flex-direction: column;
             align-items: start;
@@ -315,7 +317,7 @@ body {
             height: 80vh;
 
             .mainimg {
-                height: 100%;
+                height: 800px;
             }
 
             .mainimgnutrition {
@@ -409,6 +411,9 @@ body {
 
     /* layout */
 
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
     padding: 128px 0;
     margin: 24px;
 
@@ -422,6 +427,7 @@ body {
         align-items: center;
         justify-content: space-between;
         padding: 0 118px;
+        gap: 24px;
 
         .mission__detail {
             display: flex;
@@ -446,6 +452,188 @@ body {
 
     }
 
+    .companies__slider {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+
+        .swiper {
+            width: 100%;
+
+            .infinite__slider {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                gap: 24px;
+                justify-content: space-between;
+                scrollbar-width: none;
+
+                .company__img {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 56px;
+                    width: 100%;
+                    height: 136px;
+                    transition: .3s background-color;
+                    padding: 0 24px;
+
+                    .companyimg {
+                        transition: .3s fill;
+                        width: 150px;
+                        fill: var(--osler-gray-60);
+                    }
+                }
+
+                .company__img:hover {
+                    background-color: var(--osler-gray-60);
+
+                    .companyimg {
+                        fill: var(--osler-gray-white);
+                    }
+                }
+
+            }
+
+            .infinite__slider::-webkit-scrollbar {
+                height: 0;
+            }
+        }
+    }
+
+}
+
+
+
+
+/* ====== Infinite Slider of Mission Section  ====== */
+/* ====== Infinite Slider of Mission Section  ====== */
+
+.scroller[data-animated="true"] {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg,
+            transparent,
+            white 20%,
+            white 80%,
+            transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction="right"] {
+    --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+    --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+    --_animation-duration: 20s;
+}
+
+.scroller[data-speed="slow"] {
+    --_animation-duration: 40s;
+}
+
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 0.5rem));
+    }
+}
+
+
+
+
+/* ====== Statics Section ====== */
+/* ====== Statics Section ====== */
+
+.static__section {
+
+    /* layout */
+
+    margin: 24px;
+    padding: 128px 118px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    align-items: center;
+
+    /* style */
+
+    border-radius: 180px;
+    background: var(--healing-green-50, #84CC16);
+
+    .heading {
+        color: var(--osler-gray-white);
+    }
+
+    .statics__cards {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        width: 100%;
+
+        .card {
+
+            /* Layout */
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            padding: 38px;
+            width: 100%;
+
+            /* Style */
+
+            border-radius: 64px;
+            background: var(--osler-gray-white, #FFF);
+            box-shadow: 0px 8px 16px 0px rgba(47, 60, 51, 0.05);
+
+            .static__number {
+                color: var(--osler-gray-80, #2F3C33);
+
+                /* Heading 2xl/ExtraBold */
+                font-family: Nunito;
+                font-size: 72px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: 80px;
+                /* 111.111% */
+                letter-spacing: -2.16px;
+
+                >span {
+                    color: var(--healing-green-50, #84CC16);
+                }
+            }
+
+            .static__detail {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                >img {
+                    width: 24px;
+                }
+
+                >span {
+                    color: var(--osler-gray-80, #2F3C33);
+                    font-size: 24px;
+                    font-weight: 600;
+                }
+            }
+
+        }
+    }
+
 }
 
 
@@ -462,8 +650,111 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ====== Media Quries ====== */
 /* ====== Media Quries ====== */
+
+
+
+
+/* ====== Media Quries (1348 / Small LED) ====== */
+
+@media (max-width: 1348px) {
+
+
+
+
+    /* ====== Mission Section ====== */
+
+
+    .mission__section {
+        .mission__content {
+            .heading {
+                max-width: 450px;
+            }
+        }
+    }
+
+    /* ====== Static Section ====== */
+
+    .static__section {
+
+        .statics__cards {
+            flex-wrap: wrap;
+
+
+            .card {
+                width: 518px;
+            }
+        }
+
+    }
+}
 
 
 
@@ -472,7 +763,15 @@ body {
 
 @media (max-width: 1092px) {
 
+
+
+
+    /* ====== Header Section ====== */
+
     .header__section {
+
+        /* ====== Hero Section ====== */
+
         .hero__section {
             flex-direction: column;
             justify-content: center;
@@ -512,6 +811,34 @@ body {
 
         }
     }
+
+
+
+
+    /* ====== Mission Section ====== */
+
+    .mission__section {
+        padding: 96px 0;
+
+        .mission__content {
+            align-items: start;
+            flex-direction: column-reverse;
+            padding: 0 60px;
+
+            .heading {
+                max-width: 100%;
+            }
+
+            .mission__detail {
+                flex-direction: column-reverse;
+
+                .paragraph {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
 
 }
 
@@ -561,6 +888,20 @@ body {
 
         }
     }
+
+
+
+
+    /* ====== Mission Section ====== */
+
+    .mission__section {
+        border-radius: 96px;
+
+        .mission__content {
+            padding: 0 16px;
+        }
+    }
+
 
 }
 
