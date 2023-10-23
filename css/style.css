@@ -638,9 +638,41 @@ body {
 
 
 
+/* ====== Servcies Section ====== */
+/* ====== Servcies Section ====== */
 
+.services__section {
 
+    /* layout */
 
+    display: flex;
+    padding: 128px 236px;
+    flex-direction: column;
+    gap: 48px;
+
+    /* style */
+
+    border-radius: 180px;
+    background: var(--osler-gray-10, #F5F5F5);
+
+    .services__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        >.btn {
+
+            padding: 16px 24px;
+
+            border-radius: 18px;
+            color: var(--osler-gray-80, #2F3C33);
+            font-size: 16px;
+            font-weight: 700;
+            background-color: transparent;
+            border: 1px solid var(--osler-gray-60, #647067);
+        }
+    }
+}
 
 
 
@@ -863,9 +895,9 @@ body {
     /* ====== Static Section ====== */
 
     .static__section {
-        gap: 36px;        
+        gap: 36px;
 
-        .heading{
+        .heading {
             font-size: 36px;
         }
 
@@ -878,10 +910,10 @@ body {
                 grid-column: 1;
             }
 
-            .card{
+            .card {
                 padding: 64px 22px;
 
-                .static__number{
+                .static__number {
                     font-size: 64px;
                 }
             }
