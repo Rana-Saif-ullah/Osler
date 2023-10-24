@@ -645,6 +645,7 @@ body {
 
     /* layout */
 
+    margin: 24px;
     display: flex;
     padding: 128px 236px;
     flex-direction: column;
@@ -660,6 +661,10 @@ body {
         align-items: center;
         justify-content: space-between;
 
+        .heading {
+            color: var(--osler-gray-80, #2F3C33);
+        }
+
         >.btn {
 
             padding: 16px 24px;
@@ -672,6 +677,84 @@ body {
             border: 1px solid var(--osler-gray-60, #647067);
         }
     }
+
+    .services__cards {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 16px;
+
+        .card {
+
+            /* layout */
+
+            display: flex;
+            align-items: center;
+            gap: 64px;
+            width: 100%;
+            padding: 32px;
+
+            /* style */
+
+            border-radius: 64px;
+            background: var(--osler-gray-white, #FFF);
+            box-shadow: 0px 8px 16px 0px rgba(47, 60, 51, 0.05);
+
+
+            .small__text {
+                font-size: 16px;
+                color: var(--osler-gray-80, #2F3C33);
+            }
+
+            .service__img {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                gap: 24px;
+
+                >img {
+                    padding: 24px;
+                    border-radius: 30px;
+                }
+
+                .background__heal__10 {
+                    background: var(--healing-green-10, #ECFCCB);
+                }
+
+                .remote__red__10 {
+                    background: var(--remote-red-10, #FFE4E7);;
+                }
+
+                .osler__gray__10{
+                    background: var(--osler-gray-10, #F5F5F5);
+                }
+
+                .caring__violet__10{
+                    background: var(--caring-violet-10, #EDE9FE);
+                }
+
+                .service__text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+
+                    .small__text {
+                        color: var(--osler-gray-80, #2F3C33);
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 800;
+                        line-height: 32px;
+                        letter-spacing: -0.72px;
+                    }
+
+                    .paragraph{
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 
