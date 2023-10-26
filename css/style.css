@@ -197,7 +197,18 @@ body {
     }
 }
 
+/* ====== Button 2 ====== */
 
+.btn-2 {
+    padding: 16px 24px;
+
+    border-radius: 18px;
+    color: var(--osler-gray-80, #2F3C33);
+    font-size: 16px;
+    font-weight: 700;
+    background-color: transparent;
+    border: 1px solid var(--osler-gray-60, #647067);
+}
 
 
 /* ====== Header Section ====== */
@@ -647,7 +658,7 @@ body {
 
     margin: 24px;
     display: flex;
-    padding: 128px 236px;
+    padding: 128px 16vw;
     flex-direction: column;
     gap: 48px;
 
@@ -722,14 +733,15 @@ body {
                 }
 
                 .remote__red__10 {
-                    background: var(--remote-red-10, #FFE4E7);;
+                    background: var(--remote-red-10, #FFE4E7);
+                    ;
                 }
 
-                .osler__gray__10{
+                .osler__gray__10 {
                     background: var(--osler-gray-10, #F5F5F5);
                 }
 
-                .caring__violet__10{
+                .caring__violet__10 {
                     background: var(--caring-violet-10, #EDE9FE);
                 }
 
@@ -747,17 +759,39 @@ body {
                         letter-spacing: -0.72px;
                     }
 
-                    .paragraph{
+                    .paragraph {
                         max-width: 100%;
                     }
                 }
             }
+
+            >img {
+                transition: .3s transform;
+            }
+
         }
+
+        .card:hover {
+            >img {
+                transform: translate(10px);
+            }
+        }
+
     }
 
 }
 
 
+
+
+/* ====== Feature Section ====== */
+/* ====== Feature Section ====== */
+
+.core__feature{
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+}
 
 
 
@@ -963,6 +997,15 @@ body {
     .static__section {
         padding: 96px 60px;
     }
+
+
+
+
+    /* Services Section */
+
+    .services__section {
+        padding: 128px 4vw;
+    }
 }
 
 
@@ -1004,6 +1047,35 @@ body {
 
     }
 
+
+
+
+    /* Services Section */
+
+    .services__section {
+
+        .services__cards {
+            .card {
+                position: relative;
+                border-radius: 56px;
+                padding: 32px 32px 108px 32px;
+                align-items: start;
+                flex-direction: column;
+
+                .service__img {
+                    flex-direction: column;
+                    align-items: start;
+                }
+
+                >img {
+                    position: absolute;
+                    right: 32px;
+                    bottom: 32px;
+                }
+            }
+        }
+
+    }
 }
 
 
