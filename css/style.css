@@ -787,10 +787,75 @@ body {
 /* ====== Feature Section ====== */
 /* ====== Feature Section ====== */
 
-.core__feature{
+.core__feature {
+
     display: flex;
     flex-direction: column;
+    align-items: center;
+
     gap: 96px;
+    padding: 128px 12vw;
+
+    .heading {
+        color: var(--osler-gray-80, #2F3C33);
+    }
+
+    .feature__container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+
+        .feature__content {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            align-items: start;
+
+            .feature__details {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .feature__point {
+                    width: 186px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+
+                    .point__heading {
+                        color: var(--osler-gray-80, #2F3C33);
+                        font-size: 30px;
+                        font-style: normal;
+                        font-weight: 800;
+                        line-height: 38px;
+                        letter-spacing: -0.9px;
+
+                        >span {
+                            color: var(--remote-red-50, #F43F5E);
+                        }
+                    }
+
+                    .point__text {
+                        color: var(--osler-gray-60, #647067);
+                        font-family: Nunito;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                        letter-spacing: -0.36px;
+                    }
+                }
+            }
+        }
+
+        .feature__img {
+            >img {
+                max-height: 500px;
+            }
+        }
+    }
 }
 
 
@@ -1006,6 +1071,52 @@ body {
     .services__section {
         padding: 128px 4vw;
     }
+
+
+
+
+    /* ====== Feature Section ====== */
+    /* ====== Feature Section ====== */
+
+    .core__feature {
+
+        .heading {
+            text-align: center;
+            max-width: 740px;
+        }
+
+        .feature__container {
+            flex-direction: column-reverse;
+            gap: 42px;
+
+            .feature__content {
+                align-items: center;
+
+                .heading {
+                    text-align: center;
+                    max-width: 740px;
+                }
+
+                .paragraph {
+                    max-width: 800px;
+                    text-align: center;
+                }
+
+                .feature__details {
+                    .feature__point {
+                        align-items: center;
+                    }
+                }
+            }
+
+            .feature__img {
+                >img {
+                    max-height: 660px;
+                }
+            }
+        }
+    }
+
 }
 
 
@@ -1085,6 +1196,14 @@ body {
 
 @media (max-width: 532px) {
 
+    /* ====== componets ====== */
+
+    /* Button 2.0 */
+
+    /* .btn-2{
+        padding: 9px 16px;
+    } */
+
     .header__section {
         .hero__section {
 
@@ -1147,6 +1266,59 @@ body {
         padding: 96px 16px;
     }
 
+
+
+
+    /* Services Section */
+
+    .services__section {
+
+        border-radius: 96px;
+
+        .services__title {
+            flex-direction: column-reverse;
+            align-items: center;
+
+            .heading {
+                font-size: 36px;
+            }
+        }
+    }
+
+
+
+    /* ====== Feature Section ====== */
+    /* ====== Feature Section ====== */
+
+    .core__feature {
+
+        .heading {
+
+            font-size: 30px;
+            font-weight: 800;
+            line-height: 38px;
+            letter-spacing: -0.9px;
+        }
+
+        .feature__container {
+            gap: 32px;
+
+            .feature__content {
+                .paragraph {
+                    font-size: 16px;
+                    line-height: 160%;
+                    /* 25.6px */
+                    letter-spacing: -0.16px;
+                }
+            }
+
+            .feature__img {
+                >img {
+                    max-width: 320px;
+                }
+            }
+        }
+    }
 }
 
 
