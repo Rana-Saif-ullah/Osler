@@ -745,11 +745,12 @@ body {
     .static__section {
 
         .statics__cards {
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
 
-
-            .card {
-                width: 518px;
+            .card:last-child {
+                grid-column: 1;
+                grid-column-end: 3;
             }
         }
 
@@ -840,6 +841,24 @@ body {
     }
 
 
+
+
+    /* ====== Static Section ====== */
+
+    .static__section {
+        padding: 96px 60px;
+
+        .statics__cards {
+            display: grid;
+            grid-template-columns: 1fr;
+
+            .card:last-child {
+                grid-column: 1;
+                grid-column-end: 2;
+            }
+        }
+    }
+
 }
 
 
@@ -902,6 +921,31 @@ body {
         }
     }
 
+
+
+
+    /* Statics Section */
+
+    .static__section {
+        border-radius: 96px;
+        padding: 96px 16px;
+
+        .heading{
+            text-align: center;
+        }
+
+        .statics__cards{
+            .card{
+                padding: 64px 32px;
+
+                .static__detail{
+                    .small__text{
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
 
 }
 
