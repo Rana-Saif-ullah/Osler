@@ -934,7 +934,7 @@ body {
 /* ====== Benifits Section ====== */
 /* ====== Benifits Section ====== */
 
-.benifits__section {
+.benefits__section {
 
     /* layout */
 
@@ -1033,18 +1033,54 @@ body {
 
 
 
+/* ====== App Download Section ====== */
+/* ====== App Download Section ====== */
 
+.download__section {
 
+    /* Layout */
 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 64px 6vw;
+    margin: 24px;
 
+    overflow: hidden;
 
+    /* Style */
 
+    border-radius: 180px;
+    background: var(--healing-green-20, #D9F99D);
 
+    .dowload__img {
+        
+        transform: scale(1.38);
 
+        >img {
+            max-width: 500px;
+        }
+    }
 
+    .dowload__content {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 32px;
 
+        .btn-2 {
+            border: 1px solid var(--osler-gray-80, #2F3C33);
+            color: var(--osler-gray-80, #2F3C33);
+        }
 
+        .heading {
+            width: 365px;
+            color: var(--osler-gray-80, #2F3C33);
+        }
+    }
 
+}
 
 
 
@@ -1100,13 +1136,23 @@ body {
 
 
 
-/* ====== Media Quries ====== */
-/* ====== Media Quries ====== */
 
 
 
 
-/* ====== Media Quries (1348 / Small LED) ====== */
+
+
+
+
+
+
+/* ====== Media Queries ====== */
+/* ====== Media Queries ====== */
+
+
+
+
+/* ====== Media Queries (1348 / Small LED) ====== */
 
 @media (max-width: 1348px) {
 
@@ -1114,7 +1160,7 @@ body {
 
 
     /* ====== Mission Section ====== */
-
+    /* ====== Mission Section ====== */
 
     .mission__section {
         .mission__content {
@@ -1128,6 +1174,7 @@ body {
 
 
     /* ====== Static Section ====== */
+    /* ====== Static Section ====== */
 
     .static__section {
 
@@ -1140,12 +1187,13 @@ body {
         }
 
     }
+
 }
 
 
 
 
-/* ====== Media Quries (1092 / Laptops) ====== */
+/* ====== Media Queries (1092 / Laptops) ====== */
 
 @media (max-width: 1092px) {
 
@@ -1299,10 +1347,10 @@ body {
 
 
 
-    /* ====== Benifits Section ====== */
-    /* ====== Benifits Section ====== */
+    /* ====== Benefits Section ====== */
+    /* ====== Benefits Section ====== */
 
-    .benifits__section {
+    .benefits__section {
 
         .benifits__cards {
             grid-template-columns: repeat(2, 1fr);
@@ -1310,9 +1358,24 @@ body {
 
     }
 
+
+
+
+    /* ====== App Download Section ====== */
+    /* ====== App Download Section ====== */
+
+    .download__section {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 12 4px;
+    }
+
 }
 
-/* ====== Media Quries (880 / Big Tabs) ====== */
+
+
+
+/* ====== Media Queries (880 / Big Tabs) ====== */
 
 @media (max-width: 880px) {
 
@@ -1386,7 +1449,7 @@ body {
     /* ====== Benifits Section ====== */
     /* ====== Benifits Section ====== */
 
-    .benifits__section {
+    .benefits__section {
 
         .benifits__cards {
             grid-template-columns: repeat(1, 1fr);
@@ -1398,7 +1461,7 @@ body {
 
 
 
-/* ====== Media Quries (532 / Small Tabs) ====== */
+/* ====== Media Queries (532 / Small Tabs) ====== */
 
 @media (max-width: 532px) {
 
@@ -1537,9 +1600,9 @@ body {
         }
     }
 
- 
- 
- 
+
+
+
     /* ====== Benifits Section ====== */
     /* ====== Benifits Section ====== */
 
@@ -1552,7 +1615,6 @@ body {
 
 
 
-/* ====== Media Quries (532 / Small Tabs) ====== */
 
 
 
@@ -1570,49 +1632,45 @@ body {
 
 
 
-
-
-
-/* 
 
 
 @keyframes leftright {
-    0%{
+    0% {
         transform: translateX(40px);
         opacity: 0;
     }
-    
-    100%{
+
+    100% {
         transform: translateX(0px);
         opacity: 1;
     }
-    
+
 }
 
 
 @keyframes topbottom {
-    0%{
+    0% {
         transform: translateY(40px);
         opacity: 0;
     }
-    
-    100%{
+
+    100% {
         transform: translateY(0px);
         opacity: 1;
     }
-    
+
 }
 
 
 @keyframes bottomtop {
-    0%{
+    0% {
         transform: translateY(-40px);
         opacity: 0;
     }
-    
-    100%{
+
+    100% {
         transform: translateY(0px);
         opacity: 1;
     }
-    
-} */
+
+}
