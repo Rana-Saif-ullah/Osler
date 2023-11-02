@@ -931,8 +931,8 @@ body {
 
 
 
-/* ====== Benifits Section ====== */
-/* ====== Benifits Section ====== */
+/* ====== Benefits Section ====== */
+/* ====== Benefits Section ====== */
 
 .benefits__section {
 
@@ -1083,6 +1083,58 @@ body {
 }
 
 
+
+
+/* ====== Footer Section ====== */
+/* ====== Footer Section ====== */
+
+.footer__section {
+
+    /* layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    padding: 112px 24px 24px 24px;
+
+    /* style */
+
+    border-radius: 180px 180px 0px 0px;
+    background: var(--osler-gray-80, #2F3C33);
+
+
+    .footer__detail {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+
+        .footer__logo {
+            width: 200px;
+        }
+
+        .paragraph {
+
+            /* layout */
+
+            max-width: 550px;
+
+            /* style */
+
+            color: var(--osler-gray-20, #E3E4E3);
+            font-size: 20px;
+            text-align: center;
+        }
+    }
+
+    .footer__links{
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+    }
+
+}
 
 
 
@@ -1371,10 +1423,11 @@ body {
 
         .dowload__content {
             align-items: center;
+            gap: 16px;
 
             .heading {
-                font-size: 36px;
                 text-align: center;
+                width: 100%;
             }
         }
 
@@ -1466,6 +1519,7 @@ body {
         }
 
     }
+
 }
 
 
@@ -1554,7 +1608,7 @@ body {
     /* Services Section */
 
     .services__section {
-
+        margin: 16px;
         border-radius: 96px;
 
         .services__title {
@@ -1565,6 +1619,7 @@ body {
                 font-size: 36px;
             }
         }
+
     }
 
 
@@ -1573,6 +1628,9 @@ body {
     /* ====== Feature Section ====== */
 
     .core__feature {
+        margin: 16px;
+        gap: 48px;
+        padding: 96px 16px;
 
         .heading {
 
@@ -1619,6 +1677,7 @@ body {
     .benefits__section {
         padding: 96px 16px;
         border-radius: 96px;
+        margin: 16px;
     }
 
 
@@ -1630,6 +1689,17 @@ body {
     .download__section {
         padding: 64px 16px;
         border-radius: 96px;
+        margin: 16px;
+
+        .dowload__img {
+            transform: scale(1.2);
+        }
+
+        .dowload__content {
+            .heading {
+                font-size: 36px;
+            }
+        }
     }
 }
 
