@@ -338,7 +338,7 @@ body {
                 right: -65px;
                 width: 150px;
                 top: 320px;
-                animation: leftright 1s 1;
+                animation: leftright 2s 1;
             }
 
             .mainimgbp {
@@ -346,7 +346,7 @@ body {
                 right: -90px;
                 width: 140px;
                 top: 100px;
-                animation: bottomtop 1s 1;
+                animation: bottomtop 2s 1;
             }
 
             .mainimgdoctor {
@@ -354,7 +354,7 @@ body {
                 bottom: 250px;
                 left: -100px;
                 width: 350px;
-                animation: topbottom 1s 1;
+                animation: topbottom 2s 1;
             }
         }
     }
@@ -1055,7 +1055,7 @@ body {
     background: var(--healing-green-20, #D9F99D);
 
     .dowload__img {
-        
+
         transform: scale(1.38);
 
         >img {
@@ -1367,7 +1367,17 @@ body {
     .download__section {
         flex-direction: column-reverse;
         align-items: center;
-        gap: 12 4px;
+        gap: 74px;
+
+        .dowload__content {
+            align-items: center;
+
+            .heading {
+                font-size: 36px;
+                text-align: center;
+            }
+        }
+
     }
 
 }
@@ -1465,7 +1475,7 @@ body {
 
 @media (max-width: 532px) {
 
-    /* ====== componets ====== */
+    /* ====== components ====== */
 
     /* Button 2.0 */
 
@@ -1606,8 +1616,19 @@ body {
     /* ====== Benifits Section ====== */
     /* ====== Benifits Section ====== */
 
-    .benifits__section {
+    .benefits__section {
         padding: 96px 16px;
+        border-radius: 96px;
+    }
+
+
+
+
+    /* ====== Download App Section ====== */
+    /* ====== Download App Section ====== */
+
+    .download__section {
+        padding: 64px 16px;
         border-radius: 96px;
     }
 }
