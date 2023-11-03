@@ -226,7 +226,7 @@ body {
 
     /* Layout */
 
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     gap: 80px;
@@ -277,6 +277,145 @@ body {
                 padding: 22px;
                 background: var(--osler-gray-white, #FFF);
             }
+        }
+    }
+
+    .drop__content {
+        padding: 0px 8vw;
+        display: flex;
+        align-items: center;
+        gap: 16vw;
+
+        .drop__links {
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+
+            .drop__link {
+                color: var(--osler-gray-white, #FFF);
+                font-size: 48px;
+                font-weight: 800;
+                line-height: 56px;
+                letter-spacing: -1.44px;
+                transition: .3s opacity;
+                opacity: .6;
+                position: relative;
+            }
+
+            .drop__link::before {
+                content: '';
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                border-radius: 4.5px;
+                top: 50%;
+                left: -20px;
+                visibility: hidden;
+                transform: translateY(-50%);
+                background: var(--osler-gray-white, #FFF);
+                transition: .2s visibility;
+            }
+
+            .drop__link:hover {
+                opacity: 1;
+            }
+
+            .drop__link:hover::before {
+                visibility: visible;
+            }
+
+        }
+
+        .pc__info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 72px;
+
+            .info__container {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+
+                .info__heading {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+
+                    .info__title {
+                        color: var(--osler-gray-white, #FFF);
+
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 800;
+                        line-height: normal;
+                        letter-spacing: -0.4px;
+                    }
+                }
+
+                .info__text {
+                    color: var(--osler-gray-white, #FFF);
+
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 160%;
+                    letter-spacing: -0.2px;
+                }
+            }
+
+            .btn {
+                width: fit-content;
+                background-color: transparent;
+                border: 1px solid var(--osler-gray-white);
+                font-weight: 800;
+                transition: .3s border;
+            }
+
+            .btn:hover {
+                border: 1px solid var(--osler-gray-20);
+            }
+        }
+
+        .pc__info .info__container:nth-child(1) {
+            grid-column: 1;
+            grid-column-end: 3;
+        }
+    }
+
+    .drop__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 24px;
+
+        .extra__links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+
+            .dot {
+                width: 10px;
+                height: 10px;
+                border-radius: 3px;
+                background: var(--healing-green-30, #BEF264);
+            }
+
+            .link {
+                color: var(--osler-gray-white, #FFF);
+
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                letter-spacing: -0.32px;
+            }
+        }
+
+        .pc__icons{
+            display: flex;
+            align-items: center;
+            gap: 24px;
         }
     }
 }
@@ -886,7 +1025,6 @@ body {
             flex-direction: column;
             gap: 28px;
             align-items: start;
-            width: 100%;
 
             .feature__details {
                 display: flex;
@@ -930,9 +1068,11 @@ body {
                 max-height: 500px;
             }
         }
+
     }
 
     .feature-2 {
+        justify-content: space-between;
         .feature__content {
             .feature__details {
                 width: 400px;
@@ -995,8 +1135,11 @@ body {
                     width: 100%;
                     flex-direction: row;
                 }
+
             }
+
         }
+
     }
 
 }
