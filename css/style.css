@@ -250,7 +250,7 @@ body {
 
 
         .nav__icon,
-        .menu__icon {
+        .dropmenu__icon {
 
             /* ====== Layout ====== */
 
@@ -418,6 +418,10 @@ body {
             gap: 24px;
         }
     }
+}
+
+.active__drop__section{
+    display: flex;
 }
 
 
