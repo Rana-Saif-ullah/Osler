@@ -226,7 +226,7 @@ body {
 
     /* Layout */
 
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 80px;
@@ -234,13 +234,18 @@ body {
     position: fixed;
     height: 100%;
     width: 100%;
+    overflow-y: scroll;
 
     /* Style */
 
+    opacity: 0;
     z-index: 99;
     background: url(../images/navbarbackground.png);
     background-size: cover;
     background-repeat: no-repeat;
+    transition: .3s;
+    transform: scale(0);
+    transform-origin: top right;
 
     .drop__navbar {
         display: flex;
@@ -284,7 +289,7 @@ body {
         padding: 0px 8vw;
         display: flex;
         align-items: center;
-        gap: 16vw;
+        gap: 6vw;
 
         .drop__links {
             display: flex;
@@ -412,7 +417,7 @@ body {
             }
         }
 
-        .pc__icons{
+        .pc__icons {
             display: flex;
             align-items: center;
             gap: 24px;
@@ -420,8 +425,11 @@ body {
     }
 }
 
-.active__drop__section{
-    display: flex;
+
+.active__drop__section {
+    transition: .3s;
+    transform: scale(1);
+    opacity: 1;
 }
 
 
@@ -1077,6 +1085,7 @@ body {
 
     .feature-2 {
         justify-content: space-between;
+
         .feature__content {
             .feature__details {
                 width: 400px;
@@ -1618,6 +1627,80 @@ body {
 /* ====== Media Queries (1092 / Laptops) ====== */
 
 @media (max-width: 1092px) {
+
+
+
+
+    /* ====== Navbar Drop Section ====== */
+    /* ====== Navbar Drop Section ====== */
+
+    .drop__section {
+
+        .drop__navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px;
+
+
+            .nav__icon,
+            .dropmenu__icon {
+
+                /* ====== Layout ====== */
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 28px;
+
+                /* ====== Style ====== */
+
+                border-radius: 30px;
+                border: 1px solid var(--osler-gray-white, #FFF);
+                box-shadow: 0px 8px 16px 0px rgba(47, 60, 51, 0.05);
+
+                >img {
+                    height: 100%;
+                }
+
+            }
+
+            .logo {
+                >img {
+                    border-radius: 30px;
+                    padding: 22px;
+                    background: var(--osler-gray-white, #FFF);
+                }
+            }
+        }
+
+        .drop__content {
+            justify-content: center;
+
+            .drop__links {
+                align-items: center;
+            }
+
+            .pc__info {
+                display: none;
+            }
+        }
+
+        .drop__footer {
+            justify-content: center;
+
+
+            .extra__links {
+                display: none;
+            }
+
+            .pc__icons {
+                display: flex;
+                align-items: center;
+                gap: 24px;
+            }
+        }
+    }
 
 
 
