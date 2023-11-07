@@ -18,6 +18,18 @@
     font-family: 'Nunito', sans-serif;
 }
 
+/* ====== Webkit Scroll Bar ====== */
+/* ====== Webkit Scroll Bar ====== */
+
+::-webkit-scrollbar{
+    width: 8px;
+    background-color: transparent;
+    height: 0;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--healing-green-50);
+}
 
 
 
