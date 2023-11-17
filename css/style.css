@@ -922,6 +922,25 @@ body {
 
     }
 
+    
+
+    .about__section{
+        
+        .about__content{
+            .heading{
+                line-height: 140%;
+                font-size: 42px;
+            }
+        }
+
+        .about__img {
+            >img {
+                max-height: 400px;
+            }
+        }
+
+    }
+
 }
 
 
@@ -1268,6 +1287,11 @@ body {
             width: 50%;
             transform: translate(0px, -8px) rotatez(45deg);
         }
+    }
+
+
+    .about__section{
+        flex-direction: column-reverse;
     }
 
 
