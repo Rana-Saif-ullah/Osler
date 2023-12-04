@@ -740,6 +740,11 @@ body {
     background-color: var(--primary-color);
     border-radius: 180px 180px 0px 0px;
 
+    .paragraph {
+        text-align: center;
+        color: var(--osler-gray-white);
+    }
+
     .footer__content {
 
         /* Layout */
@@ -748,11 +753,6 @@ body {
         flex-direction: column;
         gap: 24px;
         align-items: center;
-
-        .paragraph {
-            text-align: center;
-            color: var(--osler-gray-white);
-        }
     }
 
     .contact__form {
@@ -765,6 +765,11 @@ body {
 
         .heading {
             color: var(--osler-gray-white, #FFF);
+        }
+
+        .paragraph {
+            text-align: center;
+            max-width: 800px;
         }
 
         .form {
@@ -922,12 +927,12 @@ body {
 
     }
 
-    
 
-    .about__section{
-        
-        .about__content{
-            .heading{
+
+    .about__section {
+
+        .about__content {
+            .heading {
                 line-height: 140%;
                 font-size: 42px;
             }
@@ -1290,7 +1295,7 @@ body {
     }
 
 
-    .about__section{
+    .about__section {
         flex-direction: column-reverse;
     }
 
